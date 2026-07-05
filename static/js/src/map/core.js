@@ -35,7 +35,9 @@ export function initCy(mapId, onReady) {
         autounselectify: true,
         minZoom: 0.1,
         maxZoom: 5,
-        wheelSensitivity: 2,
+        // wheelSensitivity=2 удваивал шаг зума на каждый тик колеса/тачпада →
+        // зум резкий и «прыгает». Cytoscape рекомендует держать 1 (по умолчанию).
+        wheelSensitivity: 1,
         fit: false
     });
 
